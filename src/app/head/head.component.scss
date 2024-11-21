@@ -1,0 +1,85 @@
+h1 {
+    font-family: 'Fira Code';
+    font-size: 100px;
+    color: #D9D9D9;
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+
+h2 {
+    font-family: 'Fira Code';
+    font-weight: 400;
+    font-size: 48px;
+    color: #D9D9D9;
+    margin: 0;
+}
+
+button {
+    font-family: 'Karla';
+    font-size: 18px;
+    border: none;
+    border-radius: 100px;
+    padding: 16px 24px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    
+    span {
+        display: inline-block;
+        transition: transform 1.5s ease-in-out;
+    }
+
+    &:hover {
+        border: 1px solid #3DCFB6;
+        transition: border 125ms ease-in-out;
+        color: #3DCFB6;
+
+        span {
+            transition: all 125ms ease-in-out;
+            animation: moveTextLeftAndRight 1.5s ease-in-out infinite;
+        }
+    }
+}
+
+@keyframes moveTextLeftAndRight {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-120%);
+    }
+    51% {
+        transform: translateX(120%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.head {
+    background-image: url('/assets/img/design/background-head.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.head-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    >div {
+        display: flex;
+        gap: 32px;
+    }
+}
