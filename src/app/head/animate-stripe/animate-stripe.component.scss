@@ -1,0 +1,46 @@
+.stripe-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 101%; 
+    overflow: hidden; 
+    background-color: rgba(67, 67, 67, 0.9);
+    padding: 8px 0;
+    font-size: 32px;
+    font-family: 'Karla', sans-serif;
+    color: #3DCFB6;
+    transform: rotate(-4deg) translateY(-70px) ;
+  }
+  
+  .stripe-content {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: scroll 10s linear infinite; 
+    align-items: center;
+  }
+  
+  .stripe-content span {
+    margin: 0 24px;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+    min-height: 8px;
+    background-color: #3DCFB6;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 24px;
+  }
+  
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0); 
+    }
+    100% {
+      transform: translateX(-100%); 
+    }
+  }
+  
