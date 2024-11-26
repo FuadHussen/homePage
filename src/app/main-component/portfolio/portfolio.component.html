@@ -1,0 +1,30 @@
+<div class="portfolio">
+  <div class="portfolio-container">
+    <div class="portfolio-title">
+      <h3>Portfolio</h3>
+      <h1>Featured Projects</h1>
+      <p>
+        Explore a selection of my work gere - Interact with projects to see my
+        skills in action
+      </p>
+      <div class="portfolio-title-line">
+        <hr class="separator-line">
+        <ng-container *ngFor="let project of projects; let i = index">
+          <div class="project-entry" (mouseenter)="activeProject = i" (mouseleave)="activeProject = null">
+            <h3 class="project-name">{{ project.name }}</h3>
+            <span class="project-skills">
+              <ng-container *ngFor="let skill of project.skills; let isLast = last">
+                {{ skill }}<span class="separator" *ngIf="!isLast">|</span>
+              </ng-container>
+            </span>
+          </div>
+          <div class="project-preview" *ngIf="activeProject === i" [@fadeInOut]
+               [ngStyle]="{'transform': 'translateY(' + (100 + (i * 75)) + '%)'}">
+            <img [src]="project.image" [alt]="project.name">
+          </div>
+          <hr class="separator-line">
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
