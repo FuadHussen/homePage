@@ -1,17 +1,44 @@
+@mixin border-style {
+    color: #fff;
+    border: 1px solid #3DCFB6;
+    border-radius: 32px;
+    background-color: #1F2E2B;
+    padding: 32px;
+    width: 568px;
+    max-width: 100%;
+
+    div {
+        color: #D9D9D9;
+    }
+
+    p {
+        display: flex;
+        gap: 16px;
+
+        img {
+            position: relative;
+            width: 32px;
+            height: 32px;
+        }
+    }
+}
+
 .about-me-content {
     position: relative;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    width: 100%;
+    max-width: 100%;
     z-index: 1;
+    gap: 64px;
     padding-top: 100px;
 
 
     .about-me-content-image {
         flex: 1;
+
         img {
-            position: relative; 
+            position: relative;
             width: 600px;
             max-width: 100%;
             height: auto;
@@ -19,21 +46,9 @@
         }
     }
 
-    h1, h3 {
+    h1,
+    h3 {
         color: #3DCFB6;
-        font-family: 'Karla';
-    }
-
-    h1 {
-        margin: 0;
-        margin-bottom: 16px;
-        font-size: 64px;
-        font-family: 'Fira Code';
-        font-weight: 700;
-    }
-
-    h3{
-        font-size: 24px;
     }
 
     .about-me-content-text {
@@ -46,36 +61,18 @@
         font-size: 18px;
 
         .border-about-me {
+            @include border-style;
+        }
+    }
+}
+
+.border-about-me {
+
+    p {
+        &:hover {
             color: #fff;
-            border: 1px solid #3DCFB6;
-            border-radius: 16px;
-            background-color: #1F2E2B;
-            padding: 32px;
-            font-family: 'Karla';
-            width: 500px;
-            max-width: 100%;
-
-            div {
-                color: #D9D9D9;
-                font-family: 'Karla';
-            }
-
-            p {
-                display: flex;
-                gap: 16px;
-
-                &:hover {
-                    color: #fff;
-                    transition: all 125ms ease;
-                    transform: scale(1.01);
-                }
-
-                img {
-                    position: relative;
-                    width: 32px;
-                    height: 32px;
-                }
-            }
+            transition: all 125ms ease;
+            transform: scale(1.01);
         }
     }
 }

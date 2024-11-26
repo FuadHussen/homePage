@@ -153,16 +153,34 @@ body {
 .cursor-glow {
     width: 200px;
     height: 200px;
-    background: radial-gradient(circle, 
-        rgba(61, 207, 182, 0.5) 0%,    
-        rgba(61, 207, 182, 0.3) 20%,   
-        rgba(61, 207, 182, 0.1) 40%,  
-        transparent 60%
-    );
+    background: radial-gradient(circle,
+            rgba(61, 207, 182, 0.5) 0%,
+            rgba(61, 207, 182, 0.3) 20%,
+            rgba(61, 207, 182, 0.1) 40%,
+            transparent 60%);
     position: fixed;
     pointer-events: none;
     z-index: 9998;
     transform: translate(-50%, -50%);
     transition: transform 0.15s ease;
     mix-blend-mode: screen;
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: 16px;
+    font-size: 64px;
+    font-family: 'Fira Code';
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 24px;
+    font-family: 'Karla';
+}
+
+p,
+span {
+    font-family: 'Karla';
+    font-size: 18px;
 }
