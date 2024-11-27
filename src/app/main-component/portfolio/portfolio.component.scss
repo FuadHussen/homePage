@@ -67,14 +67,22 @@
     transition: all 125ms ease;
     
     img {
-        width: 295px;
-        height: 192px;
+        width: 520px;
+        height: 370px;
         object-fit: cover;
+
+        &:last-child {
+            border-radius: 30px;
+        }
     }
 }
 
 .project-name {
     color: #fff;
+
+    img {
+        transform: translateY(4px);
+    }
 }
 
 .project-skills {

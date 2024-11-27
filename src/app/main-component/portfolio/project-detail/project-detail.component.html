@@ -1,0 +1,55 @@
+<div class="project-detail-overlay" *ngIf="project" [@fadeInOut] (click)="closeDetail()">
+  <div class="project-detail-content" (click)="$event.stopPropagation()">
+    <!-- Left Side: Project Details -->
+    <div class="left-content">
+      <div class="project-header">
+        <h1>01</h1>
+        <h1>{{ project.name }}</h1>
+      </div>
+
+      <div class="project-about">
+        <h3>What is this project about?</h3>
+        <p>{{ project.description }}</p>
+      </div>
+
+      <div class="project-skills">
+        <span *ngFor="let language of project.languages; let i = index" class="skill-icon">
+          <img [src]="'assets/img/design/' + language.toLowerCase() + '-hover.png'" [alt]="language">
+          <span class="language-label">{{ project.skills[i] }}</span>
+        </span>
+      </div>
+
+      <div class="project-buttons">
+        <button>
+          <a [href]="project.githubLink" target="_blank" class="btn">
+            <span>GitHub <img src="assets/img/design/arrow-outward-hover.png" alt=""></span>
+          </a>
+        </button>
+        <button>
+          <a [href]="project.liveLink" target="_blank" class="btn">
+            <span>Live Test <img src="assets/img/design/arrow-outward-hover.png" alt=""></span>
+          </a>
+        </button>
+      </div>
+    </div>
+
+    <!-- Right Side: Image and Navigation -->
+    <div class="right-content">
+      <div class="close-button" (click)="closeDetail()">
+        <img src="assets/img/design/x.png" alt="close" class="close-icon">
+        <img src="assets/img/design/x-hover.png" alt="close" class="close-icon-hover">
+      </div>
+      <div class="project-image">
+        <img [src]="project.image" [alt]="project.name">
+      </div>
+      <div class="next-project">
+        <a href="javascript:void(0)" (click)="nextProject()">
+          Next project
+          <div class="arrow-container">
+            <img src="assets/img/design/right-hover.png" alt="next" class="arrow-hover">
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

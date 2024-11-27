@@ -10,8 +10,8 @@
       <div class="portfolio-title-line">
         <hr class="separator-line">
         <ng-container *ngFor="let project of projects; let i = index">
-          <div class="project-entry" (mouseenter)="activeProject = i" (mouseleave)="activeProject = null">
-            <h3 class="project-name">{{ project.name }}</h3>
+          <div class="project-entry" (mouseenter)="activeProject = i" (mouseleave)="activeProject = null" (click)="openProjectDetail(project)">
+            <h3 class="project-name">{{ project.name }} <img *ngIf="activeProject === i" src="assets/img/design/arrow-outward.png" alt=""></h3>
             <span class="project-skills">
               <ng-container *ngFor="let skill of project.skills; let isLast = last">
                 {{ skill }}<span class="separator" *ngIf="!isLast">|</span>
@@ -19,7 +19,7 @@
             </span>
           </div>
           <div class="project-preview" *ngIf="activeProject === i" [@fadeInOut]
-               [ngStyle]="{'transform': 'translateY(' + (100 + (i * 75)) + '%)'}">
+               [ngStyle]="{'transform': 'translateY(' + (50 + (i * 20)) + '%)'}">
             <img [src]="project.image" [alt]="project.name">
           </div>
           <hr class="separator-line">
@@ -28,3 +28,10 @@
     </div>
   </div>
 </div>
+
+<app-project-detail 
+  *ngIf="selectedProject" 
+  [project]="selectedProject"
+  (close)="closeProjectDetail()"
+  (next)="showNextProject()">
+</app-project-detail>
