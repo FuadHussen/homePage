@@ -39,6 +39,7 @@
 .portfolio-title-line {
     display: flex;
     flex-direction: column;
+    width: 900px;
 }
 
 .project-entry {
@@ -61,14 +62,14 @@
 
 .project-preview {
     position: absolute;
-    left: 50%;
+    right: 15%;
     top: 0;
     opacity: 0;
     transition: all 125ms ease;
     
     img {
         width: 520px;
-        height: 370px;
+        height: 287px;
         object-fit: cover;
 
         &:last-child {

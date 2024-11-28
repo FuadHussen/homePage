@@ -11,6 +11,7 @@ interface Project {
   githubLink: string;
   liveLink: string;
   image: string;
+  responsiveImage: string;
 }
 
 @Component({

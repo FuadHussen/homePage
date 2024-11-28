@@ -29,6 +29,7 @@ export class PortfolioComponent {
     {
       name: 'Join',
       image: 'assets/img/projects/game-preview.png',
+      responsiveImage: 'assets/img/projects/join.png',
       skills: ['HTML', 'CSS', 'JavaScript'],
       languages: ['html', 'css', 'js'],
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
@@ -38,6 +39,7 @@ export class PortfolioComponent {
     {
       name: 'El Pollo Loco',
       image: 'assets/img/projects/game1-preview.png',
+      responsiveImage: 'assets/img/projects/el-pollo-loco.png',
       skills: ['HTML', 'CSS', 'JavaScript'],
       languages: ['html', 'css', 'js'],
       description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
@@ -47,6 +49,7 @@ export class PortfolioComponent {
     {
       name: 'Ring of fire',
       image: 'assets/img/projects/game2-preview.png',
+      responsiveImage: 'assets/img/projects/ring-of-fire.png',
       skills: ['Angular', 'Firebase', 'TypeScript', 'CSS'],
       languages: ['angular', 'firebase', 'ts', 'css'],
       description: 'A multiplayer game where players have to avoid obstacles...',
