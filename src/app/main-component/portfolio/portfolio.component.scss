@@ -62,19 +62,15 @@
 
 .project-preview {
     position: absolute;
-    right: 15%;
+    right: 5%;
     top: 0;
-    opacity: 0;
+    opacity: 1;
     transition: all 125ms ease;
     
     img {
-        width: 520px;
-        height: 287px;
-        object-fit: cover;
-
-        &:last-child {
-            border-radius: 30px;
-        }
+        border-radius: 30px;
+        width: 350px;
+        height: 200px;
     }
 }
 
