@@ -31,7 +31,7 @@ export class PortfolioComponent {
       image: 'assets/img/projects/game-preview.png',
       skills: ['HTML', 'CSS', 'JavaScript'],
       languages: ['html', 'css', 'js'],
-      description: 'A task management system inspired by the Kanban methodology...',
+      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
       githubLink: 'https://github.com/StephanieWetzel/Join_group',
       liveLink: 'https://fuad-hussen.developerakademie.net/join/index.html'
     },
@@ -40,7 +40,7 @@ export class PortfolioComponent {
       image: 'assets/img/projects/game1-preview.png',
       skills: ['HTML', 'CSS', 'JavaScript'],
       languages: ['html', 'css', 'js'],
-      description: 'A simple game where you have to avoid obstacles...',
+      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       githubLink: 'https://github.com/FuadHussen/el_pollo_loco',
       liveLink: 'https://fuad-hussen.developerakademie.net/el_pollo_loco/index.html'
     },
@@ -67,5 +67,9 @@ export class PortfolioComponent {
     const currentIndex = this.projects.findIndex(p => p === this.selectedProject);
     const nextIndex = (currentIndex + 1) % this.projects.length;
     this.selectedProject = this.projects[nextIndex];
+  }
+
+  get selectedProjectIndex(): number {
+    return this.projects.findIndex(p => p === this.selectedProject);
   }
 }

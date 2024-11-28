@@ -1,0 +1,28 @@
+<div class="feedbacks">
+    <h3>What my colleagues say about me</h3>
+
+    <div class="feedback-carousel">
+        <div class="feedback-container" [style.transform]="'translateX(' + translateX + 'px)'">
+            <div class="feedback" *ngFor="let feedback of feedbacks; let i = index" [class.active]="i === currentIndex">
+                <p>{{ feedback.text }}</p>
+                <div class="author">
+                    <span class="line"></span>
+                    <h4>{{ feedback.name }}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <img [src]="isLeftHovered ? 'assets/img/design/arrow-left-hover.png' : 'assets/img/design/arrow-left.png'"
+            alt="Previous" (click)="prev()" (mouseenter)="isLeftHovered = true" (mouseleave)="isLeftHovered = false">
+
+        <ng-container *ngFor="let feedback of feedbacks; let i = index">
+            <img [src]="currentIndex === i ? 'assets/img/design/point-active.png' : 'assets/img/design/point.png'"
+                alt="Point">
+        </ng-container>
+
+        <img [src]="isRightHovered ? 'assets/img/design/arrow-right-hover.png' : 'assets/img/design/arrow-right.png'"
+            alt="Next" (click)="next()" (mouseenter)="isRightHovered = true" (mouseleave)="isRightHovered = false">
+    </div>
+</div>

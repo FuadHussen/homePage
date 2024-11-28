@@ -27,6 +27,13 @@
   position: relative;
 }
 
+.left-content {
+  padding-left: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .right-content {
   display: flex;
   flex-direction: column;
@@ -38,7 +45,7 @@
 
   img {
     width: 520px;
-    height: 370px;
+    height: auto;
     border-radius: 30px;
     object-fit: cover;
   }
@@ -189,3 +196,30 @@ button {
     }
   }
 }
+
+.project-about {
+
+  h3 {
+    font-family: 'Fira Code';
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 18px;
+    font-family: 'Karla';
+    color: #fff;
+  }
+}
+
+.project-header {
+
+  h1:first-child {
+    font-family: 'Karla';
+    font-size: 128px;
+  }
+
+  h1:last-child {
+    color: #fff;
+  }
+}
+

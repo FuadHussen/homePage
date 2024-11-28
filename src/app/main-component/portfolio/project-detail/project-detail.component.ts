@@ -2,6 +2,17 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { trigger, transition, style, animate } from '@angular/animations';
 
+interface Project {
+  id: number;
+  name: string;
+  description: string;
+  languages: string[];
+  skills: string[];
+  githubLink: string;
+  liveLink: string;
+  image: string;
+}
+
 @Component({
   selector: 'app-project-detail',
   standalone: true,
@@ -22,9 +33,14 @@ import { trigger, transition, style, animate } from '@angular/animations';
 })
 
 export class ProjectDetailComponent {
-  @Input() project: any;
+  @Input() project!: Project;
+  @Input() projectIndex: number = 0;
   @Output() close = new EventEmitter<void>();
   @Output() next = new EventEmitter<void>();
+
+  getFormattedNumber(): string {
+    return (this.projectIndex + 1).toString().padStart(2, '0');
+  }
 
   closeDetail() {
     this.close.emit();

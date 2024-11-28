@@ -1,0 +1,121 @@
+.feedbacks {
+    position: relative;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+        font-size: 32px;
+        font-weight: 700;
+        font-family: 'Fira Code';
+        margin: 0;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+
+    .feedback-carousel {
+        position: relative;
+        max-width: 1200px;
+        overflow: hidden;
+        padding: 0 24px;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+
+        .quotes-image {
+            position: absolute;
+            left: calc(50% - 216px);
+            top: 0;
+            z-index: 1;
+            transition: transform 125ms ease-out;
+        }
+
+        .feedback-container {
+            display: flex;
+            gap: 16px;
+            transition: all 125ms ease-out;
+        }
+
+        .feedback {
+            width: 500px;
+            height: 150px;
+            padding: 32px;
+            background: rgba(61, 207, 182, 0.3);
+            border-radius: 16px;
+            border: 1px solid #3DCFB6;
+            color: white;
+            transition: transform 125ms ease, opacity 125ms ease;
+
+            p {
+                margin: 0;
+            }
+
+            &.active {
+                position: relative;
+                
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -60px;
+                    width: 89px;
+                    height: 64px;
+                    background-image: url('/assets/img/design/quotes.png');
+                }
+            }
+
+            &:not(.active) {
+                transform: scale(0.9);
+                opacity: 0.6;
+            }
+        }
+    }
+
+    .navigation {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        margin-top: 32px;
+
+        img {
+            transition: transform 125ms ease;
+
+            &:hover {
+
+                &:last-child {
+                    cursor: pointer;
+
+                    transform: translateX(4px);
+                    transform: scale(1.1);
+                }
+
+                &:first-child {
+                    transform: translateX(-4px);
+                    transform: scale(1.1);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 16px;
+
+    .line {
+        height: 1px;
+        flex-grow: 1;
+        background-color: #D9D9D9;
+    }
+
+    h4 {
+        margin: 0;
+        white-space: nowrap;
+
+    }
+}

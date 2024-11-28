@@ -33,5 +33,6 @@
   *ngIf="selectedProject" 
   [project]="selectedProject"
   (close)="closeProjectDetail()"
-  (next)="showNextProject()">
+  (next)="showNextProject()"
+  [projectIndex]="selectedProjectIndex">
 </app-project-detail>
