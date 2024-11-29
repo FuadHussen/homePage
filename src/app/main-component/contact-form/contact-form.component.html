@@ -1,0 +1,32 @@
+<div class="contact-form">
+    <div class="left-container">
+        <h3>Contact Me</h3>
+        <h1>Let's work together</h1>
+        <h3>Got a problem to solve?</h3>
+        <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</p>
+        <p>Need a Frontend developer? <span>Let’s talk!</span></p>
+    </div>
+    <div class="right-container">
+        <hr class="separator-line">
+        <div class="input-group" *ngFor="let field of formFields">
+            <h3>{{ field.label }}</h3>
+            <ng-container [ngSwitch]="field.type">
+                <input *ngSwitchCase="'text'" [type]="field.type" [placeholder]="field.placeholder">
+                <input *ngSwitchCase="'email'" [type]="field.type" [placeholder]="field.placeholder">
+                <textarea *ngSwitchCase="'textarea'" [placeholder]="field.placeholder"></textarea>
+            </ng-container>
+            <hr class="separator-line">
+        </div>
+        <div class="privacy-checkbox">
+            <div class="custom-checkbox">
+                <input type="checkbox" id="privacy">
+                <img [src]="checkboxImages.unchecked" alt="checkbox" class="checkbox-img unchecked">
+                <img [src]="checkboxImages.hover" alt="checkbox" class="checkbox-img hover">
+                <img [src]="checkboxImages.checked" alt="checkbox" class="checkbox-img checked">
+                <img [src]="checkboxImages.checkedHover" alt="checkbox" class="checkbox-img checked-hover">
+            </div>
+            <label for="privacy">I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</label>
+        </div>
+        <button class="send-button">Say Hello ;)</button>
+    </div>
+</div>
