@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component, inject } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 
 interface FormField {
   type: string;
@@ -18,7 +20,7 @@ interface CheckboxImages {
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, HttpClientModule],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss'
 })
@@ -30,6 +32,8 @@ export class ContactFormComponent {
     checked: 'assets/img/design/check-box-3.png',
     checkedHover: 'assets/img/design/check-box-4.png'
   };
+
+  http = inject(HttpClient);
 
   formFields: FormField[] = [
     {
@@ -48,4 +52,39 @@ export class ContactFormComponent {
       placeholder: 'Hello Fuad, I am interested in...'
     }
   ];
+
+  contactData = {
+    name: '',
+    email: '',
+    message: ''
+  }
+
+  post = {
+    endPoint: 'https://fuad-hussen.com/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      withCredentials: false,
+      observe: 'response' as 'response'
+    }
+  };
+
+  privacyAccepted = false;
+
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.submitted && ngForm.form.valid) {
+      this.http.post(this.post.endPoint, this.contactData, this.post.options)
+        .subscribe({
+          next: (response) => {
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          }
+        });
+    }
+  }
 }

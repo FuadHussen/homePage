@@ -40,7 +40,7 @@ p {
 .input-group {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 16px;
 
     h3 {
         color: #3DCFB6;
@@ -70,8 +70,7 @@ p {
     }
 
     textarea {
-        min-height: 40px;
-        resize: vertical;
+        resize: none;
         scrollbar-width: thin;
         scrollbar-color: #3DCFB6 transparent;
 
@@ -182,4 +181,11 @@ p {
         border: 1px solid #3DCFB6;
         color: #3DCFB6;
     }
+}
+
+.error-message {
+    color: #EC7B7BCC;
+    font-family: 'Karla';
+    font-size: 18px;
+    margin-left: 16px;
 }

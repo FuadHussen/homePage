@@ -3,30 +3,55 @@
         <h3>Contact Me</h3>
         <h1>Let's work together</h1>
         <h3>Got a problem to solve?</h3>
-        <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</p>
+        <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to
+            your projects with my work.</p>
         <p>Need a Frontend developer? <span>Let’s talk!</span></p>
     </div>
     <div class="right-container">
         <hr class="separator-line">
-        <div class="input-group" *ngFor="let field of formFields">
-            <h3>{{ field.label }}</h3>
-            <ng-container [ngSwitch]="field.type">
-                <input *ngSwitchCase="'text'" [type]="field.type" [placeholder]="field.placeholder">
-                <input *ngSwitchCase="'email'" [type]="field.type" [placeholder]="field.placeholder">
-                <textarea *ngSwitchCase="'textarea'" [placeholder]="field.placeholder"></textarea>
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="input-group">
+            <ng-container *ngFor="let field of formFields">
+                <h3>{{ field.label }}</h3>
+                <ng-container [ngSwitch]="field.type">
+                    <ng-container *ngSwitchCase="'text'">
+                        <input [(ngModel)]="contactData.name" [type]="field.type" [placeholder]="field.placeholder"
+                            name="name" required #nameInput="ngModel">
+                        @if (nameInput.invalid && nameInput.touched) {
+                        <span class="error-message">Oops! it seems your name is missing </span>
+                        }
+                    </ng-container>
+
+                    <ng-container *ngSwitchCase="'email'">
+                        <input [(ngModel)]="contactData.email" [type]="field.type" [placeholder]="field.placeholder"
+                            name="email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required
+                            #emailInput="ngModel">
+                        @if (emailInput.invalid && emailInput.touched) {
+                        <span class="error-message">Hoppla! your email is required</span>
+                        }
+                    </ng-container>
+
+                    <ng-container *ngSwitchCase="'textarea'">
+                        <textarea minlength="10" [(ngModel)]="contactData.message" [placeholder]="field.placeholder"
+                            name="message" required #message="ngModel"></textarea>
+                        @if (message.invalid && message.touched) {
+                        <span class="error-message">What do you need to develop?</span>
+                        }
+                    </ng-container>
+                </ng-container>
+                <hr class="separator-line">
             </ng-container>
-            <hr class="separator-line">
-        </div>
-        <div class="privacy-checkbox">
-            <div class="custom-checkbox">
-                <input type="checkbox" id="privacy">
-                <img [src]="checkboxImages.unchecked" alt="checkbox" class="checkbox-img unchecked">
-                <img [src]="checkboxImages.hover" alt="checkbox" class="checkbox-img hover">
-                <img [src]="checkboxImages.checked" alt="checkbox" class="checkbox-img checked">
-                <img [src]="checkboxImages.checkedHover" alt="checkbox" class="checkbox-img checked-hover">
+            <div class="privacy-checkbox">
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="privacy" required [(ngModel)]="privacyAccepted" name="privacy">
+                    <img [src]="checkboxImages.unchecked" alt="checkbox" class="checkbox-img unchecked">
+                    <img [src]="checkboxImages.hover" alt="checkbox" class="checkbox-img hover">
+                    <img [src]="checkboxImages.checked" alt="checkbox" class="checkbox-img checked">
+                    <img [src]="checkboxImages.checkedHover" alt="checkbox" class="checkbox-img checked-hover">
+                </div>
+                <label for="privacy">I've read the <a href="#">privacy policy</a> and agree to the processing of my data
+                    as outlined.</label>
             </div>
-            <label for="privacy">I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</label>
-        </div>
-        <button class="send-button">Say Hello ;)</button>
+            <button type="submit" class="send-button">Say Hello ;)</button>
+        </form>
     </div>
 </div>
