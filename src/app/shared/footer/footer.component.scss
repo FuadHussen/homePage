@@ -1,0 +1,72 @@
+@import './../navbar/navbar.component.scss';
+
+
+footer {
+  position: relative;
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+div:first-child {
+  
+  p {
+    font-size: 16px;
+    color: #fff;
+  }
+}
+
+div:nth-child(2) {
+  
+  p {
+    font-size: 18px;
+    color: #3DCFB6;
+    font-family: 'Fira Code';
+    font-weight: 400;
+  }
+}
+
+div:last-child {
+
+  p {
+    font-size: 16px;
+    color: #fff;
+  }
+
+  a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    transition: color 125ms ease;
+
+    &:hover {
+      color: #3DCFB6;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: -12px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 6px;
+        height: 6px;
+        background-color: #3DCFB6;
+        border-radius: 50%;
+        opacity: 0;
+        animation: fadeIn 125ms ease-in-out forwards;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+

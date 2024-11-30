@@ -51,6 +51,7 @@
                 <label for="privacy">I've read the <a href="#">privacy policy</a> and agree to the processing of my data
                     as outlined.</label>
             </div>
+            <span class="error-message" *ngIf="!privacyAccepted && contactForm.submitted">Please accept the privacy policy.</span>
             <button type="submit" class="send-button">Say Hello ;)</button>
         </form>
     </div>

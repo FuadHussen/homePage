@@ -75,7 +75,7 @@ export class ContactFormComponent {
   privacyAccepted = false;
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid) {
+    if (ngForm.submitted && ngForm.form.valid && this.privacyAccepted) {
       this.http.post(this.post.endPoint, this.contactData, this.post.options)
         .subscribe({
           next: (response) => {
