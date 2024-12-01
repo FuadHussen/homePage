@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [CommonModule, ProjectDetailComponent],
+  imports: [CommonModule, ProjectDetailComponent, TranslateModule],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
   animations: [

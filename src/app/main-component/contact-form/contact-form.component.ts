@@ -2,12 +2,12 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 interface FormField {
   type: string;
   label: string;
-  placeholder: string;
 }
 
 interface CheckboxImages {
@@ -20,7 +20,7 @@ interface CheckboxImages {
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [CommonModule, FormsModule, HttpClientModule],
+  imports: [CommonModule, FormsModule, HttpClientModule, TranslateModule],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss'
 })
@@ -38,18 +38,15 @@ export class ContactFormComponent {
   formFields: FormField[] = [
     {
       type: 'text',
-      label: "What's your name?",
-      placeholder: 'Your name goes here'
+      label: "WHATS_YOUR_NAME"
     },
     {
       type: 'email',
-      label: "What's your email?",
-      placeholder: 'youremail@email.com'
+      label: "WHATS_YOUR_EMAIL"
     },
     {
       type: 'textarea',
-      label: 'How can I help you?',
-      placeholder: 'Hello Fuad, I am interested in...'
+      label: 'HOW_CAN_I_HELP_YOU'
     }
   ];
 

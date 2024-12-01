@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     gap: 64px;
-    padding-bottom: 100px;  
+    padding-bottom: 100px;
 
     h3 {
         margin-top: 0;
@@ -109,8 +109,8 @@ p {
 
         input[type="checkbox"] {
             position: absolute;
-            width: 100%;
-            height: 100%;
+            width: auto;
+            height: auto;
             opacity: 0;
             cursor: pointer;
             z-index: 1;
@@ -118,8 +118,8 @@ p {
 
         .checkbox-img {
             position: absolute;
-            width: 100%;
-            height: 100%;
+            width: auto;
+            height: auto;
             transition: opacity 125ms ease;
             opacity: 0;
         }
@@ -130,36 +130,38 @@ p {
 
         input:hover~.hover {
             opacity: 1;
+            width: auto;
+            height: auto;
         }
 
         input:hover~.unchecked {
             opacity: 0;
+            width: auto;
+            height: auto;
         }
 
         input:checked~.checked {
             opacity: 1;
+            width: auto;
+            height: auto;
         }
 
         input:checked~.unchecked {
             opacity: 0;
+            width: auto;
+            height: auto;
         }
 
         input:checked:hover~.checked-hover {
             opacity: 1;
+            width: auto;
+            height: auto;
         }
 
         input:checked:hover~.checked {
             opacity: 0;
-        }
-    }
-
-    a {
-        color: #3DCFB6;
-        text-decoration: none;
-        transition: color 125ms ease;
-
-        &:hover {
-            color: #fff;
+            width: auto;
+            height: auto;
         }
     }
 }
@@ -188,4 +190,22 @@ p {
     font-family: 'Karla';
     font-size: 18px;
     margin-left: 16px;
+}
+
+.privacy-policy-link {
+
+    color: #3DCFB6;
+    text-decoration: none;
+    transition: color 125ms ease;
+
+    &:hover {
+        color: #fff;
+    }
+
+}
+
+.privacy-policy-text {
+    font-size: 14px;
+    font-family: 'Fira Code';
+    font-weight: 400;
 }
