@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrls: ['./navbar.component.scss']
 })
+
 export class NavbarComponent {
+
   isEnglish = true;
 
   readonly images = {
@@ -18,7 +21,16 @@ export class NavbarComponent {
     deHover: 'assets/img/design/de-hover.png'
   };
 
+  constructor(private translate: TranslateService) {
+    translate.setDefaultLang('en');
+    translate.use('en');
+    translate.onLangChange.subscribe(() => {
+      this.isEnglish = this.translate.currentLang === 'en';
+    });
+  }
+
   toggleLanguage() {
-    this.isEnglish = !this.isEnglish;
+    const newLang = this.translate.currentLang === 'en' ? 'de' : 'en';
+    this.translate.use(newLang);
   }
 }
