@@ -11,7 +11,7 @@
         <img *ngIf="!isEnglish" [src]="images.deHover" class="hover-image">
       </div>
     </a>
-    <a href="">{{ 'ABOUT_ME' | translate }}</a>
+    <a href="javascript:void(0)" (click)="scrollToSection('about-me')">{{ 'ABOUT_ME' | translate }}</a>
     <a href="">{{ 'SKILLS' | translate }}</a>
     <a href="">{{ 'PROJECTS' | translate }}</a>
   </div>

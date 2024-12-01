@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../shared/navbar/navbar.component';
 import { AnimateStripeComponent } from './animate-stripe/animate-stripe.component';
 import { TranslateModule } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-head',
   standalone: true,
