@@ -36,6 +36,7 @@
 
     .about-me-content-image {
         flex: 1;
+        max-width: 50%;
 
         img {
             position: relative;
@@ -59,6 +60,7 @@
         flex-direction: column;
         align-items: flex-start;
         font-size: 18px;
+        max-width: 50%;
 
         .border-about-me {
             @include border-style;
@@ -74,5 +76,47 @@
             transition: all 125ms ease;
             transform: scale(1.01);
         }
+    }
+}
+
+@media (max-width: 1024px) {
+    .about-me-content-text {
+        margin: 0!important;
+        
+        h1 {
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 16px!important;
+        }
+
+        span {
+            font-size: 16px!important;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .about-me-content-text {
+        max-width: 100%!important;
+    }
+
+    .about-me-content-image {
+        max-width: 100%!important;
+    }
+
+    .about-me-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .border-about-me{
+        width: auto!important;
+    }
+}
+
+@media (max-width: 425px) {
+    .border-about-me {
+        padding: 16px!important;
     }
 }

@@ -14,3 +14,15 @@
         top: 175%;
     }    
 }
+
+@media (max-width: 1024px) {
+    .main-component {
+        padding: 0 64px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-component {
+        padding: 0 32px;
+    }
+}
