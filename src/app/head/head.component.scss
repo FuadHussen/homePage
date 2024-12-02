@@ -10,7 +10,7 @@
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    
+
     span {
         display: inline-block;
         transition: transform 1.5s ease-in-out;
@@ -54,12 +54,15 @@ button {
     0% {
         transform: translateX(0);
     }
+
     50% {
         transform: translateX(-120%);
     }
+
     51% {
         transform: translateX(120%);
     }
+
     100% {
         transform: translateX(0);
     }
@@ -97,12 +100,15 @@ button {
     flex-direction: column;
     align-items: center;
     gap: 16px;
+    position: absolute;
+    left: 100px;
+    top: 60%;
 
     .vertical-line {
         width: 1px;
         background-color: #3DCFB6;
         height: 100vh;
-        margin-top: 24px; 
+        margin-top: 24px;
     }
 }
 
@@ -117,7 +123,7 @@ button {
 }
 
 .email-container {
-    
+
     a {
         display: block;
         color: #fff;
@@ -125,7 +131,7 @@ button {
         font-family: 'Karla';
         font-size: 18px;
         transform: rotate(-90deg) translateX(50%);
-        
+
         &:hover {
             color: #3DCFB6;
         }
@@ -141,7 +147,7 @@ button {
 .icon-container {
     position: relative;
     display: flex;
-    align-items: center;    
+    align-items: center;
     justify-content: center;
     margin-bottom: 8px;
 
@@ -152,6 +158,7 @@ button {
 
         &:nth-child(2) {
             opacity: 0;
+
             &.show {
                 opacity: 1;
             }
@@ -159,6 +166,7 @@ button {
 
         &:first-child {
             opacity: 1;
+
             &.hide {
                 opacity: 0;
             }
@@ -184,4 +192,81 @@ button {
     width: 1px;
     flex-grow: 1;
     background-color: #fff;
+}
+
+@media (max-width: 1024px) {
+    .head {
+        padding: 0 24px;
+    }
+
+    .head-content {
+        >div {
+            gap: 16px;
+        }
+    }
+
+    .right-side-container {
+        height: 30%;
+    }
+
+    h1 {
+        font-size: 64px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .head-content {
+        h1 {
+            font-size: 48px;
+        }
+    }
+
+    .right-side-container {
+        right: 100px;
+    }
+
+    .email-container {
+        display: none;
+    }
+
+    .arrow-container {
+        top: 66%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .right-side-container {
+        right: 0;
+    }
+
+    .arrow-container {
+        left: 8px;
+        top: 66%!important;
+    }
+
+    button {
+
+        span {
+            font-size: 14px!important;
+        }
+
+        padding: 16px!important;
+    }
+
+    h1 {
+        font-size: 32px!important;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
 }

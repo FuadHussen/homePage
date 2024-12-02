@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -22,7 +22,21 @@ export class NavbarComponent {
     deHover: 'assets/img/design/de-hover.png'
   };
 
-  constructor(private translate: TranslateService) {
+  isMenuHovered = false;
+
+  assets = {
+    img: {
+      design: {
+        'burger-menu-hover.png': 'assets/img/design/burger-menu-hover.png',
+        'burger-menu.png': 'assets/img/design/burger-menu.png'
+      }
+    }
+  };
+
+  isMenuOpen = false;
+
+
+  constructor(private translate: TranslateService, private elementRef: ElementRef) {
     translate.setDefaultLang('en');
     translate.use('en');
     translate.onLangChange.subscribe(() => {
@@ -40,5 +54,16 @@ export class NavbarComponent {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    if (!this.elementRef.nativeElement.contains(event.target)) {
+      this.isMenuOpen = false;
+    }
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }

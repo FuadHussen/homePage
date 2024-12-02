@@ -1,57 +1,69 @@
 <div class="head">
-    <app-navbar></app-navbar>
+  <app-navbar></app-navbar>
 
-    <div class="head-content">
-        <h2>Frontend Developer</h2>
-        <h1>Fuad Hussen</h1>
+  <div class="head-content">
+    <h2>Frontend Developer</h2>
+    <h1>Fuad Hussen</h1>
 
-        <div class="button-container">
-            <button><span>{{ 'CHECK_MY_WORK' | translate }}</span></button>
-            <button><span>{{ 'CONTACT_ME' | translate }}</span></button>
-        </div>
-
-        <div>
-            <div class="arrow-container" style="position: absolute; left: 100px;">
-                <img [src]="arrowMiddle">
-                <div class="vertical-line"></div>
-            </div>
-        </div>
-
-        <div class="right-side-container">
-            <div class="email-container">
-                <a href="mailto:contact@fuad-hussen.com">contact&#64;fuad-hussen.com</a>
-            </div>
-            <div class="social-icons">
-                <a href="https://github.com/FuadHussen" target="_blank">
-                    <div class="icon-container">
-                        <img [src]="github" 
-                            [class.hide]="isGithubHovered" 
-                            (mouseenter)="isGithubHovered = true"
-                            (mouseleave)="isGithubHovered = false">
-                        <img [src]="gitHubHover" 
-                            [class.show]="isGithubHovered" 
-                            (mouseenter)="isGithubHovered = true"
-                            (mouseleave)="isGithubHovered = false">
-                        <div class="hover-dot" [class.show]="isGithubHovered"></div>
-                    </div>
-                </a> 
-                <a href="mailto:contact@fuad-hussen.com">
-                <div class="icon-container">
-                    <img [src]="mail" 
-                        [class.hide]="isMailHovered" 
-                        (mouseenter)="isMailHovered = true"
-                        (mouseleave)="isMailHovered = false">
-                    <img [src]="mailHover" 
-                        [class.show]="isMailHovered" 
-                        (mouseenter)="isMailHovered = true"
-                        (mouseleave)="isMailHovered = false">
-                        <div class="hover-dot" [class.show]="isMailHovered"></div>
-                    </div>
-                </a>
-            </div>
-            <div class="vertical-line"></div>
-        </div>
+    <div class="button-container">
+      <button>
+        <span>{{ "CHECK_MY_WORK" | translate }}</span>
+      </button>
+      <button>
+        <span>{{ "CONTACT_ME" | translate }}</span>
+      </button>
     </div>
 
-    <app-animate-stripe></app-animate-stripe>
+    <div>
+      <div class="arrow-container">
+        <img [src]="arrowMiddle" />
+        <div class="vertical-line"></div>
+      </div>
+    </div>
+
+    <div class="right-side-container">
+      <div class="email-container">
+        <a href="mailto:contact@fuad-hussen.com">contact&#64;fuad-hussen.com</a>
+      </div>
+      <div class="social-icons">
+        <a href="https://github.com/FuadHussen" target="_blank">
+          <div class="icon-container">
+            <img
+              [src]="github"
+              [class.hide]="isGithubHovered"
+              (mouseenter)="isGithubHovered = true"
+              (mouseleave)="isGithubHovered = false"
+            />
+            <img
+              [src]="gitHubHover"
+              [class.show]="isGithubHovered"
+              (mouseenter)="isGithubHovered = true"
+              (mouseleave)="isGithubHovered = false"
+            />
+            <div class="hover-dot" [class.show]="isGithubHovered"></div>
+          </div>
+        </a>
+        <a href="mailto:contact@fuad-hussen.com">
+          <div class="icon-container">
+            <img
+              [src]="mail"
+              [class.hide]="isMailHovered"
+              (mouseenter)="isMailHovered = true"
+              (mouseleave)="isMailHovered = false"
+            />
+            <img
+              [src]="mailHover"
+              [class.show]="isMailHovered"
+              (mouseenter)="isMailHovered = true"
+              (mouseleave)="isMailHovered = false"
+            />
+            <div class="hover-dot" [class.show]="isMailHovered"></div>
+          </div>
+        </a>
+      </div>
+      <div class="vertical-line"></div>
+    </div>
+  </div>
+
+  <app-animate-stripe></app-animate-stripe>
 </div>

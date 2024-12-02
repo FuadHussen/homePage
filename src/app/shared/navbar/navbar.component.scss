@@ -6,11 +6,11 @@
     align-items: center;
     padding-top: 32px;
 
-    >div{
+    >div {
         display: flex;
         gap: 24px;
 
-        >a{
+        >a {
             position: relative;
             text-decoration: none;
             color: #fff;
@@ -36,6 +36,11 @@
             }
         }
     }
+
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+    }
 }
 
 .logo-container {
@@ -43,7 +48,7 @@
     cursor: pointer;
     width: 155px;
     height: 50px;
-    
+
     .logo {
         position: absolute;
         top: 0;
@@ -59,7 +64,7 @@
         .filled {
             opacity: 0;
         }
-        
+
         .outline {
             opacity: 1;
         }
@@ -70,6 +75,7 @@
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -99,9 +105,64 @@
             .default-image {
                 opacity: 0;
             }
+
             .hover-image {
                 opacity: 1;
             }
+        }
+    }
+}
+
+.dropdown-menu {
+    width: 238px;
+    height: 252px;
+    border-radius: 30px;
+    border: 1px solid #3DCFB6;
+    background-image: url('/assets/img/design/background-head.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    position: absolute;
+    right: 16px;
+    
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Fira Code';
+      font-size: 18px;
+  
+      &:hover {
+        color: #3DCFB6;
+      }
+    }
+  }
+
+@media (min-width: 768px) {
+    .burger-menu {
+        display: none!important;
+    }
+
+    .dropdown-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 16px;
+
+        img {
+            cursor: pointer;
         }
     }
 }
