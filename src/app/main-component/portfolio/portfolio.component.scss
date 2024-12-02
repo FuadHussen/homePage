@@ -98,3 +98,39 @@
     width: 100%;
     margin: 0;
 }
+
+@media (max-width: 1300px) {
+   .portfolio-title-line {
+    max-width: 70%;
+   }
+}
+
+@media (max-width: 1240px) {
+    .portfolio-title-line {
+        width: 100%!important;
+        max-width: 100%!important;
+    }
+
+    .portfolio-container {
+        display: block;
+    }
+
+    .project-preview {
+        display: none!important;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .project-entry {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 425px) {
+    .project-skills {
+        font-size: 14px!important;
+    }
+}
