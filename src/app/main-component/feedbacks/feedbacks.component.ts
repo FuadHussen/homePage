@@ -46,16 +46,24 @@ export class FeedbacksComponent {
   }
 
   updateTranslateX() {
-    switch (this.currentIndex) {
-      case 0:
-        this.translateX = 516;
-        break;
-      case 1: 
-        this.translateX = 0;
-        break;
-      case 2:
-        this.translateX = -516;
-        break;
+    const windowWidth = window.innerWidth;
+
+    if (windowWidth <= 935) {
+      this.translateX = 0;
+    } else {
+      const cardWidth = document.querySelector('.feedback.active')?.clientWidth || this.cardWidth;
+      const totalWidth = cardWidth + this.gap;
+      switch (this.currentIndex) {
+        case 0:
+          this.translateX = totalWidth;
+          break;
+        case 1: 
+          this.translateX = 0;
+          break;
+        case 2:
+          this.translateX = -totalWidth;
+          break;
+      }
     }
   }
 }

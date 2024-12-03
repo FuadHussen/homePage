@@ -5,6 +5,10 @@
     flex-direction: column;
     align-items: center;
 
+    .quotes {
+        display: none;
+    }
+
     h3 {
         font-size: 32px;
         font-weight: 700;
@@ -53,7 +57,8 @@
 
             &.active {
                 position: relative;
-                
+                z-index: 2;
+
                 &::before {
                     content: '';
                     position: absolute;
@@ -117,5 +122,73 @@
         margin: 0;
         white-space: nowrap;
 
+    }
+}
+
+@media (max-width: 935px) {
+    .navigation {
+        margin: 0!important;
+    }
+
+    .feedbacks {
+
+        .quotes {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 132px;
+            z-index: 999;
+
+            @media (max-width: 527px) {
+                top: 160px;
+            }
+        }
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .feedback-carousel {
+            .feedback-container {
+                justify-content: center;
+                overflow: hidden;
+            }
+
+            .feedback {
+                min-width: auto;
+                width: auto;
+                height: 250px;
+                opacity: 0;
+                transition: transform 125ms ease-in;
+
+                &::before {
+                    display: none;
+                }
+
+                &:not(.active) {
+                    opacity: 0;
+                }
+
+                &.active {
+                    opacity: 1;
+                    max-width: 100%;
+                    height: auto;
+                    position: absolute;
+
+                    @media (max-width: 500px) {
+
+                        p {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .feedback-carousel {
+            padding: 0!important;
+        }
     }
 }
