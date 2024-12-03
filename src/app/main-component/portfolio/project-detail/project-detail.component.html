@@ -31,6 +31,15 @@
           </a>
         </button>
       </div>
+
+      <div class="next-project">
+        <a href="javascript:void(0)" (click)="nextProject()">
+          {{ 'NEXT_PROJECT' | translate }}
+          <div class="arrow-container">
+            <img src="assets/img/design/right-hover.png" alt="next" class="arrow-hover">
+          </div>
+        </a>
+      </div>
     </div>
 
     <!-- Right Side: Image and Navigation -->
@@ -41,14 +50,6 @@
       </div>
       <div class="project-image">
         <img [src]="project.responsiveImage" [alt]="project.name">
-      </div>
-      <div class="next-project">
-        <a href="javascript:void(0)" (click)="nextProject()">
-          {{ 'NEXT_PROJECT' | translate }}
-          <div class="arrow-container">
-            <img src="assets/img/design/right-hover.png" alt="next" class="arrow-hover">
-          </div>
-        </a>
       </div>
     </div>
   </div>

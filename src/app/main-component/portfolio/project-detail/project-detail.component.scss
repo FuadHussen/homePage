@@ -13,13 +13,22 @@
 
 .project-detail-content {
   width: 1248px;
-  height: 656px;
   background: url('/assets/img/design/background-head.png') no-repeat center center / cover;
   border-radius: 30px;
   border: 1px solid #3DCFB6;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
+  position: relative;
+
+  @media (max-width: 1024px) {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 24px;
+  }
 }
 
 .left-content,
@@ -32,11 +41,22 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  position: relative;
+
+  @media (max-width: 1160px) {
+    gap: 0;
+  }
+
+  @media (max-width: 1024px) {
+    padding-left: 0;
+    max-width: 100%;
+  }
 }
 
 .right-content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 24px;
 }
 
@@ -48,21 +68,36 @@
     height: auto;
     border-radius: 30px;
     object-fit: cover;
+
+    @media (max-width: 1024px) {
+      width: 342px;
+      height: 216px;
+      max-width: 100%;
+    }
+
+    @media (max-width: 454px) {
+      height: 160px;
+      object-fit: contain;
+    }
   }
 }
 
 .next-project {
   position: absolute;
-  bottom: 20px;
-  right: 0px;
-  left: 61%;
+  bottom: 16px;
+  right: 14px;
+  left: 175%;
   width: 48px;
   height: 48px;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 8px;
+  z-index: 9999;
 
+  @media (max-width: 1024px) {
+    position: static;
+  }
 
   a {
     display: flex;
@@ -99,12 +134,15 @@
 .close-button {
   position: absolute;
   top: 20px;
-  right: 0px;
-  left: 80%;
+  right: 20px;
   width: 48px;
   height: 48px;
   cursor: pointer;
-  position: relative;
+  z-index: 1;
+
+  @media (max-width: 1024px) {
+    top: 64px;
+  }
 
   .close-icon,
   .close-icon-hover {
@@ -136,6 +174,11 @@
   color: #fff;
   display: flex;
 
+  @media (max-width: 1024px) {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
   .skill-icon {
     display: flex;
     align-items: center;
@@ -153,6 +196,7 @@
 .project-buttons {
   display: flex;
   gap: 32px;
+  margin-bottom: 24px;
 }
 
 button {
@@ -165,6 +209,11 @@ button {
   color: #fff;
   border: 1px solid #fff;
   cursor: pointer;
+
+  @media (max-width: 567px) {
+    font-size: 16px;
+    padding: 12px;
+  }
 
   a {
     text-decoration: none;
@@ -202,12 +251,25 @@ button {
   h3 {
     font-family: 'Fira Code';
     font-weight: 700;
+
+    @media (max-width: 1024px) {
+      margin: 0;
+    }
+
+    @media (max-width: 411px) {
+      font-size: 20px !important;
+    }
   }
 
   p {
     font-size: 18px;
     font-family: 'Karla';
     color: #fff;
+
+    @media (max-width: 1024px) {
+      margin-bottom: 0;
+      font-size: 16px;
+    }
   }
 }
 
@@ -216,10 +278,38 @@ button {
   h1:first-child {
     font-family: 'Karla';
     font-size: 128px;
+
+    @media (max-width: 567px) {
+      font-size: 64px !important;
+    }
   }
 
   h1:last-child {
     color: #fff;
+
+    @media (max-width: 567px) {
+      font-size: 48px !important;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    h1:first-child {
+      font-size: 88px;
+    }
+
+    h1:last-child {
+      font-size: 64px;
+    }
+  }
+
+  @media (max-width: 411px) {
+    h1:first-child {
+      font-size: 48px !important;
+    }
+
+    h1:last-child {
+      font-size: 32px !important;
+    }
   }
 }
 
