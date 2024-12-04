@@ -208,4 +208,71 @@ p {
     font-size: 14px;
     font-family: 'Fira Code';
     font-weight: 400;
+    width: fit-content;
+}
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 48px;
+    }
+
+
+}
+
+@media (max-width: 880px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .contact-form {
+        flex-direction: column;
+        width: 100%;
+
+        .left-container {
+            width: 100%;
+        }
+
+        .right-container {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 567px) {
+    input::placeholder {
+        font-size: 14px;
+    }
+
+    textarea::placeholder {
+        font-size: 14px;
+    }
+
+    label {
+        font-size: 12px !important;
+    }
+
+    .input-group {
+
+        textarea {
+            width: 100% !important;
+        }
+
+        h3 {
+            font-size: 18px !important;
+        }
+    }
+
+    .send-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .send-button-container {
+        display: flex;
+        justify-content: center;
+    }
 }

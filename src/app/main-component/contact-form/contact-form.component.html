@@ -1,7 +1,7 @@
 <div class="contact-form">
     <div class="left-container">
         <h3>{{ 'CONTACT_ME' | translate }}</h3>
-        <h1>{{ 'LETS_WORK_TOGETHER' | translate }}</h1>
+        <h1 style="white-space: pre-line;">{{ 'LETS_WORK_TOGETHER' | translate }}</h1>
         <h3>{{ 'GOT_A_PROBLEM_TO_SOLVE' | translate }}</h3>
         <p>{{ 'CONTACT_FORM_TEXT_1' | translate }}</p>
         <p>{{ 'CONTACT_FORM_TEXT_2' | translate }} <span>{{ 'CONTACT_FORM_TEXT_2_SPAN' | translate }}</span></p>
@@ -54,7 +54,9 @@
                 </label>
             </div>
             <span class="error-message" *ngIf="!privacyAccepted && contactForm.submitted">{{ 'ACCEPT_PRIVACY_POLICY' | translate }}</span>
-            <button type="submit" class="send-button">{{ 'SEND_MESSAGE' | translate }}</button>
+            <div class="send-button-container">
+                <button type="submit" class="send-button">{{ 'SEND_MESSAGE' | translate }}</button>
+            </div>
         </form>
     </div>
 </div>

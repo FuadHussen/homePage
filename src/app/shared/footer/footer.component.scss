@@ -11,7 +11,7 @@ footer {
 
 
 div:first-child {
-  
+
   p {
     font-size: 16px;
     color: #fff;
@@ -19,7 +19,7 @@ div:first-child {
 }
 
 div:nth-child(2) {
-  
+
   p {
     font-size: 18px;
     color: #3DCFB6;
@@ -65,8 +65,25 @@ div:last-child {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
 
+@media (max-width: 680px) {
+
+  div:nth-child(2) {
+    position: absolute;
+    bottom: 0;
+    left: 34%;
+    padding: 64px 0;
+  }
+}
+
+@media (max-width: 567px) {
+
+  p {
+    font-size: 14px !important;
+  }
+}
