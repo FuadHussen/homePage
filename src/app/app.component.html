@@ -1,3 +1,11 @@
-<app-head></app-head>
-<app-main-component></app-main-component>
-<router-outlet></router-outlet>
+<app-head *ngIf="showMainComponent"></app-head>
+<ng-container *ngIf="!showMainComponent">
+
+  <router-outlet></router-outlet>
+
+</ng-container>
+<ng-container *ngIf="showMainComponent">
+  <app-main-component></app-main-component>
+</ng-container>
+
+<app-footer></app-footer>

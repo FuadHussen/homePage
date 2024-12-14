@@ -3,7 +3,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
-
+import { RouterLink } from '@angular/router';
 
 interface FormField {
   type: string;
@@ -20,7 +20,7 @@ interface CheckboxImages {
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [CommonModule, FormsModule, HttpClientModule, TranslateModule],
+  imports: [CommonModule, FormsModule, HttpClientModule, TranslateModule, RouterLink],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss'
 })
