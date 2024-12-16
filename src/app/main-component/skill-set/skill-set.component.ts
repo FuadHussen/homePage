@@ -61,4 +61,9 @@ export class SkillSetComponent {
   getIconText(alt: string): string {
     return this.iconSpan[alt] || '';
   }
+
+  scrollToContact() {
+    const contactSection = document.getElementById('contact');
+    contactSection?.scrollIntoView({ behavior: 'smooth' });
+  }
 }

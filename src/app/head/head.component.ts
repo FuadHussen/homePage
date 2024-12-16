@@ -19,4 +19,15 @@ export class HeadComponent {
   mailHover = 'assets/img/design/mail-hover.png';
   isGithubHovered = false;
   isMailHovered = false;
+
+  scrollToPortfolio() {
+    const portfolioSection = document.getElementById('projects');
+    portfolioSection?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  scrollToContact() {
+    const contactSection = document.getElementById('contact');
+    contactSection?.scrollIntoView({ behavior: 'smooth' });
+  }
+
 }
