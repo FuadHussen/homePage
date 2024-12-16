@@ -6,10 +6,10 @@
     <div class="feedback-carousel">
         <div class="feedback-container" [style.transform]="'translateX(' + translateX + 'px)'">
             <div class="feedback" *ngFor="let feedback of feedbacks; let i = index" [class.active]="i === currentIndex">
-                <p>{{ feedback.text }}</p>
+                <p>{{ 'FEEDBACKS_TEXT_' + (i + 1) | translate }}</p>
                 <div class="author">
                     <span class="line"></span>
-                    <h4>{{ feedback.name }}</h4>
+                    <h4>{{ 'FEEDBACKS_NAME_' + (i + 1) | translate }}</h4>
                 </div>
             </div>
         </div>

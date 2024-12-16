@@ -1,8 +1,5 @@
-.legal-notice {
-    background-image: url('../../../../assets/img/design/background-head.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+@import '../../../main-component/contact-form/privacy-policy/privacy-policy.component.scss';
+
+.privacy-policy {
     height: 100vh;
-    max-width: 100%;
 }

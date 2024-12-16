@@ -51,5 +51,12 @@
   "PROJECT_DESCRIPTION_RING_OF_FIRE": "Ein Multiplayer-Trinkspiel, das auf dem beliebten 'Ring of Fire'-Partyspiel basiert. Die Spieler ziehen abwechselnd Karten und führen Aktionen basierend auf dem Kartenwert aus. Entwickelt mit Angular und Firebase.",
   "YOUR_NAME_PLACEHOLDER": "Dein Name kommt hier hin",
   "YOUR_EMAIL_PLACEHOLDER": "deineemail@email.com",
-  "YOUR_MESSAGE_PLACEHOLDER": "Hallo Fuad, ich interessiere mich für..."
+  "YOUR_MESSAGE_PLACEHOLDER": "Hallo Fuad, ich interessiere mich für...",
+  "LEGAL_NOTICE": "Impressum",
+  "FEEDBACKS_NAME_1": "Hanif - Team Partner",
+  "FEEDBACKS_TEXT_1": "Fuad hat sich als zuverlässiger Gruppenpartner bewährt. Seine technischen Fähigkeiten und proaktive Vorgehensweise waren entscheidend für den Erfolg unseres Projekts.",
+  "FEEDBACKS_NAME_2": "Tobias - Frontend Developer",
+  "FEEDBACKS_TEXT_2": "Unser Projekt hat sich enorm von Fuads effizientem Arbeitsstil profitiert.",
+  "FEEDBACKS_NAME_3": "Stephanie - Team Partner",
+  "FEEDBACKS_TEXT_3": "Ich hatte die Glücklichkeit, Fuad in einem Gruppenprojekt bei der Developer Akademie zu arbeiten, das viel Aufwand erforderte. Er blieb immer entspannt, kühl und fokussiert und sorgte dafür, dass unser Team für den Erfolg eingerichtet war. Er ist super kompetent, leicht zu arbeiten und ich würde ihm wieder gerne die Gelegenheit geben, mit ihm zusammen zu arbeiten."
 } 

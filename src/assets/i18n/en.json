@@ -51,5 +51,12 @@
   "PROJECT_DESCRIPTION_RING_OF_FIRE": "A multiplayer drinking game based on the popular 'Ring of Fire' party game. Players take turns drawing cards and performing actions based on the card's value. Built with Angular and Firebase.",
   "YOUR_NAME_PLACEHOLDER": "Your name goes here",
   "YOUR_EMAIL_PLACEHOLDER": "youremail@email.com",
-  "YOUR_MESSAGE_PLACEHOLDER": "Hello Fuad, I am interested in..."
+  "YOUR_MESSAGE_PLACEHOLDER": "Hello Fuad, I am interested in...",
+  "LEGAL_NOTICE": "Legal Notice",
+  "FEEDBACKS_NAME_1": "Hanif - Team Partner",
+  "FEEDBACKS_TEXT_1": "Fuad has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.",
+  "FEEDBACKS_NAME_2": "Tobias - Frontend Developer",
+  "FEEDBACKS_TEXT_2": "Our project benefited enormously from Fuad efficient way of working.",
+  "FEEDBACKS_NAME_3": "Stephanie - Team Partner",
+  "FEEDBACKS_TEXT_3": "I had the good fortune of working with Fuad in a group project at the Developer Akademie that involved a lot of effort. He always stayed calm, cool and focused, and madee sure our team was set up for success. He's super knowledgeable, easy to work with, and I'd happily work with him again given the chance."
 } 
