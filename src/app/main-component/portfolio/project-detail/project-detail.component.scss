@@ -20,6 +20,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 48px;
   position: relative;
+  height: 675px;
 
   @media (max-width: 1024px) {
     max-width: 100%;

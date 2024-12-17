@@ -1,26 +1,27 @@
 <div id="about-me" class="about-me-content">
-        <div class="about-me-content-image">
-            <img src="assets/img/design/profile.png" alt="logo-about-me">
-        </div>
-        <div class="about-me-content-text">
-            <h3>{{ 'WHO_I_AM' | translate }}</h3>
-            <div class="border-about-me">
-                <h1>{{ 'ABOUT_ME' | translate }}</h1>
-                <span>{{ 'ABOUT_ME_TEXT' | translate }}</span>
-                <div>
-                    <p>
-                        <img [src]="location" alt="location">
-                        {{ 'ABOUT_ME_LOCATION' | translate }}
-                    </p>
-                    <p>
-                        <img [src]="head" alt="head">
-                        {{ 'ABOUT_ME_MINDSET' | translate }}
-                    </p>
-                    <p>
-                        <img [src]="check" alt="check">
-                        {{ 'ABOUT_ME_PASSION' | translate }}
-                    </p>
-                </div>
-            </div>
+  <div data-aos="fade-right" class="about-me-content-image">
+    <img [src]="profile" alt="logo-about-me" />
+  </div>
+
+  <div data-aos="fade-right" data-aos-delay="500" class="about-me-content-text">
+    <h3>{{ "WHO_I_AM" | translate }}</h3>
+    <div class="border-about-me">
+      <h1>{{ "ABOUT_ME" | translate }}</h1>
+      <span>{{ "ABOUT_ME_TEXT" | translate }}</span>
+      <div>
+        <p>
+          <img [src]="location" alt="location" />
+          {{ "ABOUT_ME_LOCATION" | translate }}
+        </p>
+        <p>
+          <img [src]="head" alt="head" />
+          {{ "ABOUT_ME_MINDSET" | translate }}
+        </p>
+        <p>
+          <img [src]="check" alt="check" />
+          {{ "ABOUT_ME_PASSION" | translate }}
+        </p>
+      </div>
     </div>
+  </div>
 </div>

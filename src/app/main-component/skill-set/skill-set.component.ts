@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import AOS from 'aos';
 
 interface Icon {
   src: string;
@@ -14,7 +15,7 @@ interface Icon {
   templateUrl: './skill-set.component.html',
   styleUrl: './skill-set.component.scss'
 })
-export class SkillSetComponent {
+export class SkillSetComponent implements OnInit {
 
   icons = {
     html: 'assets/img/design/html.png',
@@ -65,5 +66,9 @@ export class SkillSetComponent {
   scrollToContact() {
     const contactSection = document.getElementById('contact');
     contactSection?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  ngOnInit() {
+    AOS.init();
   }
 }

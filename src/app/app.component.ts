@@ -7,6 +7,7 @@ import { MainComponentComponent } from './main-component/main-component.componen
 import { FooterComponent } from './shared/footer/footer.component';
 import { Router, NavigationEnd, Event as RouterEvent } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,11 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
       this.setupBrowserSpecificTasks();
+      AOS.init({
+        duration: 750,
+        easing: 'ease-in-out',
+        once: true,
+      });
     }
     this.router.events.pipe(
       filter((event: RouterEvent): event is NavigationEnd => event instanceof NavigationEnd)

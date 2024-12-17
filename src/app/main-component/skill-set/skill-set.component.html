@@ -1,6 +1,6 @@
 <div id="skills" class="skill-set-content">
   <h3>{{ 'TECHNOLOGIES' | translate }}</h3>
-  <div class="skill-set-content-container">
+  <div data-aos="fade-right" class="skill-set-content-container">
     <div class="border-skill-set">
       <h1>{{ 'SKILL_SET' | translate }}</h1>
       <p>
@@ -14,7 +14,7 @@
     </div>
 
     <div class="icons-container">
-      <div *ngFor="let icon of iconList" class="icon-wrapper">
+      <div data-aos="fade-left" *ngFor="let icon of iconList" class="icon-wrapper">
         <img [src]="icon.src" [alt]="icon.alt" />
         <span>{{ getIconText(icon.alt) }}</span>
       </div>

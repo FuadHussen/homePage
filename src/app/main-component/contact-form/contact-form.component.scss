@@ -1,5 +1,5 @@
 .contact-form {
-    max-width: 100%;
+    max-width: 1920px;
     position: relative;
     padding-top: 100px;
     display: flex;
@@ -183,6 +183,13 @@ p {
         border: 1px solid #3DCFB6;
         color: #3DCFB6;
     }
+}
+
+.send-button:disabled {
+    cursor: not-allowed;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
 }
 
 .error-message {

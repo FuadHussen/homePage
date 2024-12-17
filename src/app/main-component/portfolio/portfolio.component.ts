@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { TranslateModule } from '@ngx-translate/core';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-portfolio',
@@ -22,7 +23,7 @@ import { TranslateModule } from '@ngx-translate/core';
     ])
   ]
 })
-export class PortfolioComponent {
+export class PortfolioComponent implements OnInit {
   activeProject: any = null;
   selectedProject: any = null;
 
@@ -75,5 +76,13 @@ export class PortfolioComponent {
 
   get selectedProjectIndex(): number {
     return this.projects.findIndex(p => p === this.selectedProject);
+  }
+
+  ngOnInit() {
+    AOS.init({
+      duration: 500,
+      easing: 'ease-in-out',
+      once: true,
+    });
   }
 }

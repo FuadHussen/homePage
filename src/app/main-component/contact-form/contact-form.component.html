@@ -55,7 +55,9 @@
             </div>
             <span class="error-message" *ngIf="!privacyAccepted && contactForm.submitted">{{ 'ACCEPT_PRIVACY_POLICY' | translate }}</span>
             <div class="send-button-container">
-                <button type="submit" class="send-button">{{ 'SEND_MESSAGE' | translate }}</button>
+                <button type="submit" class="send-button" [disabled]="!contactForm.valid || !privacyAccepted">
+                    {{ 'SEND_MESSAGE' | translate }}
+                </button>
             </div>
         </form>
     </div>

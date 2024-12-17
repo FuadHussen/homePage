@@ -2,6 +2,7 @@ import { Component, ElementRef, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-navbar',
@@ -65,5 +66,9 @@ export class NavbarComponent {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  ngOnInit() {
+    AOS.init();
   }
 }

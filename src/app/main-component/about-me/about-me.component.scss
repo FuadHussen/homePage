@@ -26,17 +26,14 @@
 .about-me-content {
     position: relative;
     display: flex;
-    align-items: flex-start;
     justify-content: space-between;
-    max-width: 100%;
+    width: 1920px;
     z-index: 1;
-    gap: 64px;
     padding-top: 100px;
-
+    max-width: 100%;
 
     .about-me-content-image {
         flex: 1;
-        max-width: 50%;
 
         img {
             position: relative;
@@ -54,12 +51,11 @@
 
     .about-me-content-text {
         margin-top: 64px;
-        flex: 1;
         color: white;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        font-size: 18px;
+
         max-width: 50%;
 
         .border-about-me {
@@ -71,6 +67,7 @@
 .border-about-me {
 
     p {
+
         &:hover {
             color: #fff;
             transition: all 125ms ease;
@@ -107,7 +104,7 @@
     }
 
     .about-me-content-image {
-        max-width: 100%!important;
+        max-width: 100%;
     }
 
     .about-me-content {
@@ -123,4 +120,8 @@
     .border-about-me {
         padding: 16px!important;
     }
+}
+
+.hidden {
+    overflow: hidden;
 }

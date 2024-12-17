@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-animate-stripe',
@@ -9,4 +10,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrls: ['./animate-stripe.component.scss']
 })
 export class AnimateStripeComponent {
+  ngOnInit() {
+    AOS.init();
+  }
 }

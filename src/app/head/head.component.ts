@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../shared/navbar/navbar.component';
 import { AnimateStripeComponent } from './animate-stripe/animate-stripe.component';
 import { TranslateModule } from '@ngx-translate/core';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-head',
@@ -28,6 +29,10 @@ export class HeadComponent {
   scrollToContact() {
     const contactSection = document.getElementById('contact');
     contactSection?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  ngOnInit() {
+    AOS.init();
   }
 
 }

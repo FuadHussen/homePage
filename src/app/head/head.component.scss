@@ -13,22 +13,27 @@
 
     span {
         display: inline-block;
-        transition: transform 1.5s ease-in-out;
+        white-space: nowrap;
     }
 
     &:hover {
         border: 1px solid #3DCFB6;
-        transition: border 125ms ease-in-out;
         color: #3DCFB6;
 
         span {
-            transition: all 125ms ease-in-out;
-            animation: moveTextLeftAndRight 1.5s ease-in-out infinite;
+            animation: moveText 2s linear infinite;
         }
     }
 }
 
-
+@keyframes moveText {
+    0% {
+        transform: translateX(125%);
+    }
+    100% {
+        transform: translateX(-125%);
+    }
+}
 
 h1 {
     font-family: 'Fira Code';
@@ -50,24 +55,6 @@ button {
     @include button-style;
 }
 
-@keyframes moveTextLeftAndRight {
-    0% {
-        transform: translateX(0);
-    }
-
-    50% {
-        transform: translateX(-120%);
-    }
-
-    51% {
-        transform: translateX(120%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
 .head {
     background-image: url('/assets/img/design/background-head.png');
     background-size: cover;
@@ -79,6 +66,7 @@ button {
     padding: 0 100px;
     display: flex;
     flex-direction: column;
+    max-width: 1920px;
 }
 
 .head-content {
