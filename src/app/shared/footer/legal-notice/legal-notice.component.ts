@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
 
 @Component({
   selector: 'app-legal-notice',
@@ -9,5 +9,9 @@ import { RouterLink } from '@angular/router';
   styleUrl: './legal-notice.component.scss'
 })
 export class LegalNoticeComponent {
+  constructor(private router: Router) {}
 
+  goHome() {
+    window.scrollTo(0, 0);
+  }
 }

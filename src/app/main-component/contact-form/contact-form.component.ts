@@ -3,7 +3,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
 
 interface FormField {
   type: string;
@@ -26,6 +26,8 @@ interface CheckboxImages {
 })
 
 export class ContactFormComponent {
+  constructor(private router: Router) {}
+
   checkboxImages: CheckboxImages = {
     unchecked: 'assets/img/design/check-box-1.png',
     hover: 'assets/img/design/check-box-2.png',
@@ -83,5 +85,11 @@ export class ContactFormComponent {
           }
         });
     }
+  }
+
+  navigateToPrivacyPolicy() {
+    this.router.navigate(['/privacy-policy']).then(() => {
+      window.scrollTo(0, 0);
+    });
   }
 }

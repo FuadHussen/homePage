@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -9,5 +9,11 @@ import { RouterLink } from '@angular/router';
   styleUrl: './privacy-policy.component.scss'
 })
 export class PrivacyPolicyComponent {
+  constructor(private router: Router) {}
 
+  goHome() {
+    this.router.navigate(['/']).then(() => {
+      window.scrollTo(0, 0);
+    });
+  }
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -10,5 +10,11 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
+  constructor(private router: Router) {}
 
+  navigateToLegalNotice() {
+    this.router.navigate(['/legal-notice']).then(() => {
+      window.scrollTo(0, 0);
+    });
+  }
 }
