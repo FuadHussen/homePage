@@ -35,7 +35,7 @@ export class PortfolioComponent implements OnInit {
       skills: ['HTML', 'CSS', 'JavaScript'],
       languages: ['html', 'css', 'js'],
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
-      githubLink: 'https://github.com/StephanieWetzel/Join_group',
+      githubLink: 'https://github.com/FuadHussen/Join_group',
       liveLink: 'https://fuad-hussen.developerakademie.net/Join/login_index.html'
     },
     {

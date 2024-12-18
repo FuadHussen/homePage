@@ -1,13 +1,17 @@
-<div class="privacy-policy">  
+<div class="privacy-policy">
+  <div class="navbar-container">
+    <app-navbar></app-navbar>
+  </div>
   <h1>{{ 'LEGAL_NOTICE' | translate }}</h1>
-<p>Fuad Hussen<br />
-L&uuml;tzenkirchener Str. 271<br />
-51381 Leverkusen</p>
+  <p>Fuad Hussen<br />
+    L&uuml;tzenkirchener Str. 271<br />
+    51381 Leverkusen</p>
 
-<h2>{{ 'CONTACT' | translate }}</h2>
-<p>{{ 'PHONE' | translate }}: 01783543459<br />
-E-Mail: contact&#64;fuad-hussen.com</p>
+  <h2>{{ 'CONTACT' | translate }}</h2>
+  <p>{{ 'PHONE' | translate }}: 01783543459<br />
+    E-Mail: contact&#64;fuad-hussen.com</p>
 
-<p>{{ 'SOURCE' | translate }}: <a href="https://www.e-recht24.de">e-recht24.de</a></p>
-  <a (click)="goHome()" routerLink=""> <img src="assets/img/design/arrow-left.png" alt="Arrow Left">{{ 'LEGAL_NOTICE_BACK_TO_PORTFOLIO' | translate }}</a>
+  <p>{{ 'SOURCE' | translate }}: <a href="https://www.e-recht24.de">e-recht24.de</a></p>
+  <a (click)="goHome()" routerLink=""> <img src="assets/img/design/arrow-left.png" alt="Arrow Left">{{
+    'LEGAL_NOTICE_BACK_TO_PORTFOLIO' | translate }}</a>
 </div>
