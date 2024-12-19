@@ -27,13 +27,11 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    width: 1920px;
     z-index: 1;
     padding-top: 100px;
     max-width: 100%;
 
     .about-me-content-image {
-        flex: 1;
 
         img {
             position: relative;
@@ -124,4 +122,10 @@
 
 .hidden {
     overflow: hidden;
+}
+
+@media (min-width: 1921px) {
+    .about-me-content {
+        justify-content: space-evenly;
+    }
 }

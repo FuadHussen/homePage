@@ -38,8 +38,14 @@ export class NavbarComponent implements OnInit {
 
 
   constructor(private translate: TranslateService, private elementRef: ElementRef, private router: Router) {
-    translate.setDefaultLang('en');
-    translate.use('en');
+    const storedLanguage = localStorage.getItem('selectedLanguage');
+    if (storedLanguage) {
+      translate.use(storedLanguage);
+      this.isEnglish = storedLanguage === 'en';
+    } else {
+      translate.setDefaultLang('en');
+      translate.use('en');
+    }
     translate.onLangChange.subscribe(() => {
       this.isEnglish = this.translate.currentLang === 'en';
     });
@@ -48,6 +54,8 @@ export class NavbarComponent implements OnInit {
   toggleLanguage() {
     const newLang = this.translate.currentLang === 'en' ? 'de' : 'en';
     this.translate.use(newLang);
+    localStorage.setItem('selectedLanguage', newLang);
+    this.isEnglish = newLang === 'en';
   }
 
   scrollToSection(sectionId: string) {
@@ -83,16 +91,21 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {
+    const storedLanguage = localStorage.getItem('selectedLanguage');
+    if (storedLanguage) {
+      this.translate.use(storedLanguage);
+    }
+
     this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        if (event.url === '/legal-notice' || event.url === '/privacy-policy') {
-          setTimeout(() => {
-            AOS.init({ disable: true });
-          }, 0);
-        } else {
-          AOS.init({ disable: false });
+        if (event instanceof NavigationEnd) {
+            if (event.url === '/legal-notice' || event.url === '/privacy-policy') {
+                setTimeout(() => {
+                    AOS.init({ disable: true });
+                }, 0);
+            } else {
+                AOS.init({ disable: false });
+            }
         }
-      }
     });
   }
 }

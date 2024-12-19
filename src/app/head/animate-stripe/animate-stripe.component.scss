@@ -2,14 +2,14 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 101%; 
-    overflow: hidden; 
+    width: 100.6%; 
+    overflow: hidden;
     background-color: rgba(67, 67, 67, 0.9);
     padding: 8px 0;
     font-size: 32px;
     font-family: 'Karla', sans-serif;
     color: #3DCFB6;
-    transform: rotate(-4deg) translateY(-70px) ;
+    transform: rotate(-4deg) translateY(-70px);
   }
   
   .stripe-content {
@@ -50,3 +50,9 @@
     }
   }
   
+  @media (min-width: 1921px) {
+    .stripe-container {
+        transform: rotate(-4deg) translateY(-70px);
+        width: 100.2%;
+    }
+  }

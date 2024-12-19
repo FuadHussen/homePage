@@ -2,7 +2,6 @@
     position: relative;
     padding-top: 100px;
     padding-bottom: 100px;
-    max-width: 1920px;
     
     p {
         max-width: 450px;
@@ -133,5 +132,20 @@
 @media (max-width: 425px) {
     .project-skills {
         font-size: 14px!important;
+    }
+}
+
+@media (min-width: 1921px) {
+    .portfolio {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .project-preview {
+        position: absolute;
+        top: 0;
+        transition: all 125ms ease;
+        left: 75%;
     }
 }

@@ -1,22 +1,36 @@
 <div id="skills" class="skill-set-content">
-  <h3>{{ 'TECHNOLOGIES' | translate }}</h3>
-  <div data-aos="fade-right" class="skill-set-content-container">
-    <div class="border-skill-set">
-      <h1>{{ 'SKILL_SET' | translate }}</h1>
-      <p>
-        {{ 'SKILL_SET_TEXT' | translate }}
-      </p>
-      <p>{{ 'SKILL_SET_CONTACT' | translate }} <span>{{ 'SKILL_SET_CONTACT_SPAN' | translate }}</span></p>
-      <p>
-        {{ 'SKILL_SET_CONTACT_TEXT' | translate }}
-      </p>
-      <button (click)="scrollToContact()"><span>{{ 'SKILL_SET_BUTTON' | translate }}</span></button>
-    </div>
 
-    <div class="icons-container">
-      <div data-aos="fade-left" *ngFor="let icon of iconList" class="icon-wrapper">
-        <img [src]="icon.src" [alt]="icon.alt" />
-        <span>{{ getIconText(icon.alt) }}</span>
+  <div data-aos="fade-right" class="skill-set-content-container">
+    <div>
+      <h3>{{ "TECHNOLOGIES" | translate }}</h3>
+      <div class="border-skill-set">
+          <h1>{{ "SKILL_SET" | translate }}</h1>
+          <p>
+            {{ "SKILL_SET_TEXT" | translate }}
+      </p>
+      <p>
+        {{ "SKILL_SET_CONTACT" | translate }}
+        <span>{{ "SKILL_SET_CONTACT_SPAN" | translate }}</span>
+      </p>
+      <p>
+        {{ "SKILL_SET_CONTACT_TEXT" | translate }}
+      </p>
+      <button (click)="scrollToContact()">
+          <span>{{ "SKILL_SET_BUTTON" | translate }}</span>
+        </button>
+      </div>
+</div>
+
+    <div class="icons-container-wrapper">
+      <div class="icons-container">
+        <div
+          data-aos="fade-left"
+          *ngFor="let icon of iconList"
+          class="icon-wrapper"
+        >
+          <img [src]="icon.src" [alt]="icon.alt" />
+          <span>{{ getIconText(icon.alt) }}</span>
+        </div>
       </div>
     </div>
   </div>

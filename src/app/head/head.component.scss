@@ -56,30 +56,62 @@ button {
 }
 
 .head {
+    position: relative;
     background-image: url('/assets/img/design/background-head.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-    position: relative;
-    overflow: hidden;
     padding: 0 100px;
-    display: flex;
-    flex-direction: column;
-    max-width: 1920px;
-}
 
-.head-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    >div {
+    .head-content {
         display: flex;
-        gap: 32px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+
+        h1 {
+            font-size: 90px;
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 400;
+            color: #6AD7BF;
+            text-align: center;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            gap: 32px;
+
+            .contact-button,
+            .projects-button {
+                @include button-style;
+            }
+
+            .contact-button {
+                background-color: #6AD7BF;
+                color: #000;
+                margin-right: 16px;
+            }
+
+            .projects-button {
+                background-color: transparent;
+                color: #fff;
+                border: 1px solid #fff;
+            }
+        }
     }
 }
 
@@ -91,6 +123,7 @@ button {
     position: absolute;
     left: 100px;
     top: 60%;
+    height: -webkit-fill-available;
 
     .vertical-line {
         width: 1px;
@@ -256,5 +289,27 @@ button {
 
     h2 {
         font-size: 24px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .head {
+        min-width: max-content;
+    }
+}
+
+@media (min-width: 1600px) {
+    .head {
+        .head-content {
+            max-width: 1400px;
+
+            h1 {
+                font-size: 120px;
+            }
+
+            h2 {
+                font-size: 48px;
+            }
+        }
     }
 }
