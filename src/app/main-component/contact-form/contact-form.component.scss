@@ -282,3 +282,20 @@ p {
         justify-content: center;
     }
 }
+
+@media (min-width: 1921px) {
+    .contact-form {
+        position: relative;
+        padding-top: 100px;
+        display: flex;
+        justify-content: center;
+        gap: 64px;
+        padding-bottom: 100px;
+        width: max-content;
+        justify-self: center;
+    }
+
+    .left-container {
+        width: 50%;
+    }
+}

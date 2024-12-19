@@ -104,7 +104,7 @@ p:nth-child(3) {
 
 @media (max-width: 1024px) {
     .border-skill-set {
-        padding: 24px!important;
+        padding: 24px !important;
 
         h1 {
             font-size: 32px;
@@ -115,16 +115,16 @@ p:nth-child(3) {
         }
 
         span {
-            font-size: 16px!important;
+            font-size: 16px !important;
         }
     }
 
     .icons-container {
-        gap: 8px!important;
-        
+        gap: 8px !important;
+
         img {
-            width: 40px!important;
-            height: 40px!important;
+            width: 40px !important;
+            height: 40px !important;
         }
     }
 
@@ -139,51 +139,71 @@ p:nth-child(3) {
     }
 
     .border-skill-set {
-        max-width: 100%!important;
-        width: auto!important;
+        max-width: 100% !important;
+        width: auto !important;
     }
 
     .icons-container {
-        max-width: 100%!important;
+        max-width: 100% !important;
         padding-top: 32px;
-        gap: 16px!important;
+        gap: 16px !important;
 
         img {
-            width: 60px!important;
-            height: 60px!important;
+            width: 60px !important;
+            height: 60px !important;
         }
     }
 }
 
 @media (max-width: 425px) {
     .border-skill-set {
-        padding: 16px!important;
+        padding: 16px !important;
     }
 
     .icons-container {
-        gap: 8px!important;
+        gap: 8px !important;
 
         img {
-            width: 32px!important;
-            height: 32px!important;
+            width: 32px !important;
+            height: 32px !important;
         }
     }
 
     .icon-wrapper {
-        width: 80px!important;
-        height: 88px!important;
+        width: 80px !important;
+        height: 88px !important;
     }
 }
 
 @media (min-width: 1921px) {
     .skill-set-content-container {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
+        gap: 100px;
     }
 
     .skill-set-content {
         display: flex;
+        flex-wrap: wrap;
+    }
+
+    .icons-container-wrapper {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .skill-set-content-container-text {
+        width: -webkit-fill-available;
+        display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
+        align-items: end;
+
+        h3 {
+            position: absolute;
+            top: 18px;
+            left: 28%;
+        }
     }
 }

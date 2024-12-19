@@ -313,3 +313,13 @@ button {
         }
     }
 }
+
+@media (min-width: 1921px) {
+    .right-side-container {
+        right: 25%;
+    }
+
+    .arrow-container {
+        left: 25%;
+    }
+}
