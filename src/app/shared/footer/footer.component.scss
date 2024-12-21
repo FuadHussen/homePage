@@ -126,3 +126,9 @@ div:last-child {
     margin-bottom: 32px;
   }
 }
+
+@media (min-width: 2560px) {
+  footer {
+    justify-content: space-evenly;
+  }
+}

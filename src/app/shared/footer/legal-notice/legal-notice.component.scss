@@ -3,3 +3,19 @@
 .privacy-policy {
     min-height: calc(100vh - 233.8px);
 }
+
+@media (min-width: 2560px) {
+    .legal-notice-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-top: 64px;
+        padding-left: 25%;
+    }
+}
+
+@media (min-width: 3840px) {
+    .legal-notice-container {
+        margin: auto 100px;
+    }
+}

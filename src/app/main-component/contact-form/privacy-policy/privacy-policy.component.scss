@@ -50,3 +50,20 @@
 .navbar-container {
     margin-bottom: 32px;
 }
+
+@media (min-width: 2560px) {
+    .privacy-policy-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-top: 64px;
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+}
+
+@media (min-width: 3840px) {
+    .privacy-policy-container {
+        margin: auto 100px;
+    }
+}

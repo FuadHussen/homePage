@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterLink, Router } from '@angular/router';
 import { NavbarComponent } from './../../../shared/navbar/navbar.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-privacy-policy',
   standalone: true,
-  imports: [RouterLink, NavbarComponent],
+  imports: [RouterLink, NavbarComponent, TranslateModule],
   templateUrl: './privacy-policy.component.html',
   styleUrl: './privacy-policy.component.scss'
 })
