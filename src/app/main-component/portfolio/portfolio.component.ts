@@ -36,7 +36,7 @@ export class PortfolioComponent implements OnInit {
       languages: ['html', 'css', 'js'],
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
       githubLink: 'https://github.com/FuadHussen/Join_group',
-      liveLink: 'https://fuad-hussen.developerakademie.net/Join/login_index.html'
+      liveLink: 'https://join.fuad-hussen.com/login_index.html'
     },
     {
       name: 'El Pollo Loco',
@@ -46,7 +46,7 @@ export class PortfolioComponent implements OnInit {
       languages: ['html', 'css', 'js'],
       description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       githubLink: 'https://github.com/FuadHussen/el_pollo_loco',
-      liveLink: 'https://fuad-hussen.developerakademie.net/el_pollo_loco/index.html'
+      liveLink: 'https://el-pollo-loco.fuad-hussen.com/index.html'
     },
     {
       name: 'Ring of fire',
@@ -56,7 +56,7 @@ export class PortfolioComponent implements OnInit {
       languages: ['angular', 'firebase', 'ts', 'css'],
       description: 'A multiplayer game where players have to avoid obstacles...',
       githubLink: 'https://github.com/FuadHussen/ringoffire',
-      liveLink: 'https://fuad-hussen.developerakademie.net/angular-projects/ringoffire/#/'
+      liveLink: 'https://ringoffire.fuad-hussen.com/#/'
     }
   ];
 
