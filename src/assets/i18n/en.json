@@ -48,7 +48,7 @@
   "NEXT_PROJECT": "Next project",
   "PROJECT_DESCRIPTION_JOIN": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
   "PROJECT_DESCRIPTION_EL_POLLO_LOCO": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
-  "PROJECT_DESCRIPTION_RING_OF_FIRE": "A multiplayer drinking game based on the popular 'Ring of Fire' party game. Players take turns drawing cards and performing actions based on the card's value. Built with Angular and Firebase.",
+  "PROJECT_DESCRIPTION_DA_BUBBLE": "A modern chat messenger with real-time communication, built with Angular and Firebase. Features direct messaging, channels, and thread-based communication.",
   "YOUR_NAME_PLACEHOLDER": "Your name goes here",
   "YOUR_EMAIL_PLACEHOLDER": "youremail@email.com",
   "YOUR_MESSAGE_PLACEHOLDER": "Hello Fuad, I am interested in...",

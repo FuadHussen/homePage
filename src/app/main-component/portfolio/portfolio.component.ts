@@ -49,14 +49,14 @@ export class PortfolioComponent implements OnInit {
       liveLink: 'https://el-pollo-loco.fuad-hussen.com/index.html'
     },
     {
-      name: 'Ring of fire',
-      image: 'assets/img/projects/game2-preview.png',
-      responsiveImage: 'assets/img/projects/ring-of-fire.png',
+      name: 'Da Bubble',
+      image: 'assets/img/projects/da-bubble.png',
+      responsiveImage: 'assets/img/projects/da-bubble-bilder.png',
       skills: ['Angular', 'Firebase', 'TypeScript', 'CSS'],
       languages: ['angular', 'firebase', 'ts', 'css'],
-      description: 'A multiplayer game where players have to avoid obstacles...',
-      githubLink: 'https://github.com/FuadHussen/ringoffire',
-      liveLink: 'https://ringoffire.fuad-hussen.com/#/'
+      description: 'A modern chat messenger with real-time communication, built with Angular and Firebase. Features direct messaging, channels, and thread-based communication.',
+      githubLink: 'https://github.com/FuadHussen/dabubble-393',
+      liveLink: 'https://da-bubble.fuad-hussen.com/'
     }
   ];
 
