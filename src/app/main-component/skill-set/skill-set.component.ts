@@ -28,17 +28,23 @@ export class SkillSetComponent implements OnInit {
     git: 'assets/img/design/git.png',
     restApi: 'assets/img/design/rest-api.png',
     scrum: 'assets/img/design/scrum.png',
-    growthMindset: 'assets/img/design/growth-mindset.png'
+    growthMindset: 'assets/img/design/growth-mindset.png',
+    csharp: 'assets/img/design/csharp.png',
+    sqlite: 'assets/img/design/sqlite.png',
+    dotnet: 'assets/img/design/dotnet.png'
   }
 
   iconList: Icon[] = [
     { src: this.icons.html, alt: 'html' },
     { src: this.icons.css, alt: 'css' },
     { src: this.icons.js, alt: 'js' },
-    { src: this.icons.materialDesign, alt: 'materialDesign' },
+    { src: this.icons.csharp, alt: 'csharp' },
+    { src: this.icons.sqlite, alt: 'sqlite' },
+    { src: this.icons.dotnet, alt: 'dotnet' },
     { src: this.icons.ts, alt: 'ts' },
     { src: this.icons.angular, alt: 'angular' },
     { src: this.icons.firebase, alt: 'firebase' },
+    { src: this.icons.materialDesign, alt: 'materialDesign' },
     { src: this.icons.git, alt: 'git' },
     { src: this.icons.restApi, alt: 'restApi' },
     { src: this.icons.scrum, alt: 'scrum' },
@@ -56,7 +62,10 @@ export class SkillSetComponent implements OnInit {
     git: 'Git',
     restApi: 'Rest-API',
     scrum: 'Scrum',
-    growthMindset: 'Growth Mindset'
+    growthMindset: 'Growth Mindset',
+    csharp: 'C#',
+    sqlite: 'SQLite',
+    dotnet: '.NET'
   }
 
   getIconText(alt: string): string {
