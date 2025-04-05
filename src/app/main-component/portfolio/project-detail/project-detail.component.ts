@@ -13,6 +13,7 @@ interface Project {
   liveLink: string;
   image: string;
   responsiveImage: string;
+  downloadLink?: string;
 }
 
 @Component({

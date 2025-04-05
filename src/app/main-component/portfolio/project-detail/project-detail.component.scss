@@ -275,13 +275,12 @@ button {
 }
 
 .project-header {
-
-  h1:first-child {
+  h1:nth-child(2) {
     font-family: 'Karla';
-    font-size: 128px;
+    font-size: 52px;
 
     @media (max-width: 567px) {
-      font-size: 64px !important;
+      font-size: 32px !important;
     }
   }
 
@@ -295,7 +294,7 @@ button {
 
   @media (max-width: 1024px) {
     h1:first-child {
-      font-size: 88px;
+      font-size: 42px;
     }
 
     h1:last-child {
@@ -305,7 +304,7 @@ button {
 
   @media (max-width: 411px) {
     h1:first-child {
-      font-size: 48px !important;
+      font-size: 32px !important;
     }
 
     h1:last-child {

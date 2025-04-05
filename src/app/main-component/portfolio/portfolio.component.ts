@@ -29,6 +29,17 @@ export class PortfolioComponent implements OnInit {
 
   projects = [
     {
+      name: 'Kunden und Verwaltungsprogramm',
+      image: 'assets/img/projects/kunden-und-auftragsverwaltung.png',
+      responsiveImage: 'assets/img/projects/kunden-und-auftragsverwaltung.png',
+      skills: ['C#', 'SQLite', 'WPF', '.NET'],
+      languages: ['csharp', 'sqlite', 'wpf', 'dotnet'],
+      description: 'Ein umfassendes Kunden- und Verwaltungsprogramm, entwickelt mit C# und SQLite. Ermöglicht effizientes Kundenmanagement und Datenverwaltung mit einer benutzerfreundlichen Oberfläche.',
+      githubLink: '',
+      liveLink: '',
+      downloadLink: 'assets/downloads/Kunden-und-verwaltungsprogramm.zip'
+    },
+    {
       name: 'Join',
       image: 'assets/img/projects/game-preview.png',
       responsiveImage: 'assets/img/projects/join.png',
