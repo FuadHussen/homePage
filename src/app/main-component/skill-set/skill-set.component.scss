@@ -39,6 +39,15 @@ p:last-child {
     }
 }
 
+.color-green {
+    color: #3DCFB6;
+}
+
+.skill-set-contact {
+    display: flex!important;
+    gap: 4px!important;
+}
+
 .skill-set-content-container {
     display: flex;
     justify-content: space-between;
